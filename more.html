@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Videos, 3D, Photography - Mike Hoffman Portfolio Extravaganza</title>
+<title>Video, 3D, Photography - Mike Hoffman Portfolio Extravaganza</title>
 <link href="css/mystyle.css" rel="stylesheet" type="text/css">
 <!-- Add jQuery library -->
 <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
@@ -31,20 +31,35 @@
 		$(".fancybox")
 			.fancybox({
 			padding : 0,
+			beforeShow : function() {
+				var alt = this.element.find('img').attr('alt');
+				
+				this.inner.find('img').attr('alt', alt);
+				
+				this.title = alt; },
 			helpers: {
             media: {}
         }
     });
 });
 </script>
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
 
+  ga('create', 'UA-30335087-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
 </head>
 
 <body>
 <!---------------- Header content ------------------->
 <header>
   <div class="topLogo"> 
-	  <img src="images/pic-heading.png" alt="Mike Hoffman Portfolio Extravaganza">
+	  <img src="images/pic-heading.jpg" alt="Mike Hoffman Portfolio Extravaganza">
   </div>
 </header>
 
@@ -95,19 +110,38 @@ function myFunction() {
 	  <h1>3D Modeling</h1>
 	  <hr>
 	  <div class="sectionContent">
-		  <a class="fancybox fancybox.iframe" href="https://sketchfab.com/models/83096c14169f49d88e0d2b2878d90df4/embed?autospin=0.2&amp;camera=0"><img src="images/thumb-chocolate.jpg" alt="Chocolate Syrup Bottle"></a>
-		  <a class="fancybox fancybox.iframe" href="https://sketchfab.com/models/c9fbf6d3754e4fe99f9c5707a14bfffa/embed?autospin=0.2&amp;camera=0"><img src="images/thumb-clock.jpg" alt="Alarm Clock"></a>
-		  <a class="fancybox fancybox.iframe" href="https://sketchfab.com/models/04473462dd6e498fa4ef76259ea09a36/embed?autospin=0.2&amp;camera=0"><img src="images/thumb-pipewrench.jpg" alt="Pipe Wrench"></a>
-		  <a class="fancybox fancybox.iframe" href="https://sketchfab.com/models/f5e18fe164614463a1e5dd3ceb32c2a7/embed?autospin=0.2&amp;camera=0"><img src="images/thumb-fbi.jpg" alt="FBI Seal"></a>
+	   	<a class="fancybox" rel="gallery1" href="images/pic-phone.jpg"><img src="images/thumb-phone.jpg" alt="3D Office Phone"></a>
+	   		<div class="hidden">
+	   			<a class="fancybox" rel="gallery1" href="images/pic-phonewf.jpg"><img src="images/thumb-phone.jpg" alt="Wireframe"></a>
+		    </div>
+	   	<a class="fancybox" rel="gallery2" href="images/pic-alarmclock.jpg"><img src="images/thumb-alarmclock.jpg" alt="3D Alarm Clock"></a>
+	   		<div class="hidden">
+	   			<a class="fancybox" rel="gallery2" href="images/pic-alarmclockwf.jpg"><img src="images/thumb-alarmclock.jpg" alt="Wireframe"></a>
+		    </div>	   	
+		<a class="fancybox" rel="gallery3" href="images/pic-pipewrench.jpg"><img src="images/thumb-pipewrench.jpg" alt="3D Pipe Wrench"></a>
+	   		<div class="hidden">
+	   			<a class="fancybox" rel="gallery3" href="images/pic-pipewrenchwf.jpg"><img src="images/thumb-pipewrench.jpg" alt="Wireframe"></a>
+		    </div>
+	   	<a class="fancybox" rel="gallery4" href="images/pic-radio.jpg"><img src="images/thumb-radio.jpg" alt="3D Antique Radio"></a>
+	   		<div class="hidden">
+	   			<a class="fancybox" rel="gallery4" href="images/pic-radiowf.jpg"><img src="images/thumb-radio.jpg" alt="Wireframe"></a>
+		    </div>
+	   	<a class="fancybox" rel="gallery5" href="images/pic-sled.jpg"><img src="images/thumb-sled.jpg" alt="3D Sled"></a>
+	   		<div class="hidden">
+	   			<a class="fancybox" rel="gallery5" href="images/pic-sledwf.jpg"><img src="images/thumb-sled.jpg" alt="Wireframe"></a>
+		    </div>
+		
 	  </div>
   </section>
   <section class="section3">
 	  <h1>Photography</h1>
 	  <hr>
 	  <div class="sectionContent">
-	  	<ul>
-			<li><a href="https://www.flickr.com/photos/37651437@N00/" target="_blank">Flickr.com</a></li>
-		</ul>
+	    <a class="fancybox" rel="gallery6" href="images/pic-smalltown.jpg"><img src="images/thumb-smalltown.jpg" alt="Small Town"></a>
+	    <a class="fancybox" rel="gallery6" href="images/pic-planetarium.jpg"><img src="images/thumb-planetarium.jpg" alt="Planetarium Abstract"></a>
+	    <a class="fancybox" rel="gallery6" href="images/pic-match.jpg"><img src="images/thumb-match.jpg" alt="Macro Match"></a>
+	    <a class="fancybox" rel="gallery6" href="images/pic-cityscape.jpg"><img src="images/thumb-cityscape.jpg" alt="Cityscape"></a>
+	    <a class="fancybox" rel="gallery6" href="images/pic-light.jpg"><img src="images/thumb-light.jpg" alt="Lighthouse"></a>
 	  </div>
   </section>
 
