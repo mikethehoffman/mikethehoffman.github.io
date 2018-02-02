@@ -211,7 +211,7 @@ footer .footerNote a:hover {
 	display: none;
 }
 /********************* Media query for Mobile devices***********************/
-@media only screen and (min-width : 285px) and (max-width : 480px) {
+@media only screen and (min-width : 285px) and (max-width : 568px) {
 /* Header */
 header {
 	width: 100%;
@@ -280,7 +280,7 @@ footer {
 }
 
 /************************ Media Query for Tablets *************************/
-@media only screen and (min-width : 481px) and (max-width : 1024px) {
+@media only screen and (min-width : 569px) and (max-width : 1024px) {
 header .topLogo .logoPlaceholder {
 	margin-bottom: 50px;
 	text-align: center;
